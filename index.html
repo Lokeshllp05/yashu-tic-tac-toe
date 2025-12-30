@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashu Tic-Tac-Toe</title>
+    <meta name="description" content="A professional-level 2-player Tic-Tac-Toe web application.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>YASHU TIC-TAC-TOE</h1>
+        </header>
+
+        <section class="player-inputs">
+            <div class="player-card" id="card-x">
+                <div class="symbol">X</div>
+                <input type="text" id="player-x-name" placeholder="Enter Player X Name" maxlength="15">
+            </div>
+            <div class="player-card" id="card-o">
+                <div class="symbol">O</div>
+                <input type="text" id="player-o-name" placeholder="Enter Player O Name" maxlength="15">
+            </div>
+        </section>
+
+        <main class="game-container">
+            <div class="status-bar">
+                <p id="game-status">Enter names to start!</p>
+            </div>
+            
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </main>
+
+        <footer class="controls">
+            <button id="restart-btn" class="btn secondary">Restart Game</button>
+            <button id="new-game-btn" class="btn primary">New Game</button>
+        </footer>
+    </div>
+
+    <div id="winner-overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <div class="trophy">🏆</div>
+            <h2 id="winner-text">PLAYER NAME (X) WINS!</h2>
+            <button id="overlay-close" class="btn primary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
